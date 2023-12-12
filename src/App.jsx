@@ -25,12 +25,12 @@ function App() {
             <Route path="SliderWoman" element={<SliderWoman />} />
             <Route path="SliderJelewer" element={<SliderJelewer />} />
           </Route>
-          <Route path={"/addCard"} element={<AddCard />} />
+          <Route path="/addCard" element={<AddCard />} />
           <Route path="/contact" element={<Contact />} />
           <Route
             path="/Jelewer"
             element={
-              <React.Suspense fallback=<Loading />>
+              <React.Suspense fallback={<Loading />}>
                 <LazyJelewer />
               </React.Suspense>
             }
@@ -38,7 +38,7 @@ function App() {
           <Route
             path="/JelewerId/:id"
             element={
-              <React.Suspense fallback=<Loading />>
+              <React.Suspense fallback={<Loading />}>
                 <LazyJelewerId />
               </React.Suspense>
             }
