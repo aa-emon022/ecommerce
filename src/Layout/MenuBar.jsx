@@ -27,7 +27,7 @@ export default function MenuBar() {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink
             to="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
+            className={({isActive})=>`${isActive ? 'text-orange-500': "text-red-700"} flex items-center space-x-3 rtl:space-x-reverse`}
           >
             <img
               src="https://flowbite.com/docs/images/logo.svg"
@@ -91,7 +91,7 @@ export default function MenuBar() {
               <li>
                 <NavLink
                   to="/"
-                  className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                  className={({isActive})=>`${isActive ? 'text-blue-700': "text-orange-500"}`}
                   aria-current="page"
                 >
                   Home
@@ -100,7 +100,7 @@ export default function MenuBar() {
               <li>
                 <NavLink
                   to="/Jelewer"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className={({isActive})=>`${isActive ? 'text-blue-700': "text-orange-500"}`}
                 >
                   Jewelry
                 </NavLink>
@@ -108,7 +108,7 @@ export default function MenuBar() {
               <li>
                 <NavLink
                   to="/Fashion"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className={({isActive})=>`${isActive ? 'text-blue-700': "text-orange-500"}`}
                 >
                    Fashion
                 </NavLink>
@@ -118,15 +118,15 @@ export default function MenuBar() {
               <li>
                 <NavLink
                   to="/Contact"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className={({isActive})=>`${isActive ? 'text-blue-700': "text-orange-500"}`}
                 >
                   Contact
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/Login"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  to="/login"
+                  className={({isActive})=>`${isActive ? 'text-blue-700': "text-orange-500"}`}
                 >
                   Login
                 </NavLink>
@@ -145,7 +145,7 @@ export default function MenuBar() {
             <li>
               <NavLink
                 to="/"
-                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                className={({isActive})=>`${isActive ? 'text-blue-700': "text-orange-500"}`}
                 aria-current="page"
               >
                 Home
@@ -155,7 +155,7 @@ export default function MenuBar() {
             <li>
               <NavLink
                 to="/Fashion"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className={({isActive})=>`${isActive ? 'text-blue-700': "text-orange-500"}`}
               >
                Fashion
               </NavLink>
@@ -163,7 +163,7 @@ export default function MenuBar() {
             <li>
               <NavLink
                 to="/Jelewer"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className={({isActive})=>`${isActive ? 'text-blue-700': "text-orange-500"}`}
               >
                 Jewelry
               </NavLink>
@@ -171,7 +171,7 @@ export default function MenuBar() {
             <li>
               <NavLink
                 to="/Contact"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className={({isActive})=>`${isActive ? 'text-blue-700': "text-orange-500"}`}
               >
                 Contact
               </NavLink>
@@ -179,7 +179,7 @@ export default function MenuBar() {
             <li>
               <NavLink
                 to="/Login"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className={({isActive})=>`${isActive ? 'text-blue-700': "text-orange-500"}`}
               >
                 Login
               </NavLink>

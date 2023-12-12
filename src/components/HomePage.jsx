@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-// Import Swiper React components
+import React, { useEffect, useRef} from "react";
+
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -9,10 +9,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import womanApi from "../assets/json/woman.json";
 import ManApi from "../assets/json/man.json";
 import { NavLink, Outlet,  } from "react-router-dom";
-
 import Layout1 from "../Layout/Layout1";
-import SliderMan from "./SliderMan";
-import Layout2 from "../Layout/Layout2";
 import Footer from "./Footer";
 import Aos from 'aos';
 import 'aos/dist/aos.css';

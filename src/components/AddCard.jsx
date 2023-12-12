@@ -88,7 +88,7 @@ export default function AddCard() {
       const timeoutId = setTimeout(() => {
         localStorage.removeItem("token");
         // Redirect to the login page after removing the token
-        window.location.replace("/addCart");
+        window.location.replace("/addCard");
       }, 3600000);
 
       // Clear the timer when the component unmounts
