@@ -3,12 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 import Layout1 from "../Layout/Layout1";
+import { useNavigate } from "react-router-dom";
 
 export default function AddCard() {
   const [uniqueItems, setUniqueItems] = useState([]);
   const [overallTotal, setOverallTotal] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
-
+let navigation=useNavigate()
   useEffect(() => {
     const data = localStorage.getItem("carts");
     const parsedData = JSON.parse(data);
@@ -76,7 +77,7 @@ export default function AddCard() {
     localStorage.removeItem("token");
 
     // Redirect to the home page (or any other desired destination)
-    window.location.replace("/");
+   navigation("/");
   };
 
   useEffect(() => {
@@ -88,14 +89,14 @@ export default function AddCard() {
       const timeoutId = setTimeout(() => {
         localStorage.removeItem("token");
         // Redirect to the login page after removing the token
-        window.location.replace("/addCard");
+        navigation("/addCard");
       }, 3600000);
 
       // Clear the timer when the component unmounts
       return () => clearTimeout(timeoutId);
     } else {
       // If no token is found, redirect to the login page
-      window.location.replace("/login");
+      navigation("/login");
     }
   }, []);
   window.scrollTo(0, 0);
