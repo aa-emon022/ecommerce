@@ -6,6 +6,7 @@ import Rating from "./Rating";
 import { NavLink } from "react-router-dom";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import Footer from "./Footer";
 
 export default function Fashion() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -193,6 +194,9 @@ export default function Fashion() {
           </div>
         </div>
         </div>
+        <section>
+          <Footer/>
+        </section>
       </Layout1>
     </>
   );
