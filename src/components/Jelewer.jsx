@@ -16,6 +16,7 @@ export default function Jelewer() {
   const [searchTerm, setSearchTerm] = useState("");
   const [cart, setCart] = useState([]);
   const [cartItemCount, setCartItemCount] = useState(0);
+  const [showMessage,setShowMessage]=useState(false)
   const pathname = window.location.pathname;
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -47,8 +48,12 @@ export default function Jelewer() {
     setCartItemCount((prevCount) => prevCount + 1);
     localStorage.setItem("carts", JSON.stringify([...cart, items]));
     localStorage.setItem("cartItemCount", cartItemCount + 1);
-  };
-
+ setShowMessage(true)
+ setTimeout(() => {
+  setShowMessage(false);
+  alert("Add successfully");
+}, 200);
+  }
   if (loading) {
     return <Loading />;
   }
@@ -56,8 +61,11 @@ export default function Jelewer() {
   return (
     <>
       <Layout1>
+      
         <section data-aos="zoom-out">
+      
           <div className="flex flex-col dark:bg-gray-800 dark:text-white bg-white text-black">
+          
             <p1 className="pt-[1rem] pl-6">{pathname}</p1>
             <div className="h-[8rem] text-center pt-[5rem]">
               <input
@@ -71,7 +79,9 @@ export default function Jelewer() {
                 }}
               />
             </div>
+            
             <div className="flex flex-wrap justify-center gap-9">
+           
               {filteredItems.map((items, index) => (
                 <div
                   key={index}

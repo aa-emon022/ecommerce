@@ -4,11 +4,13 @@ import { faPlus, faMinus, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 import Layout1 from "../Layout/Layout1";
 import { useNavigate } from "react-router-dom";
+import Loading from "./Loading";
 
 export default function AddCard() {
   const [uniqueItems, setUniqueItems] = useState([]);
   const [overallTotal, setOverallTotal] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
+  const [loading, setLoading] = useState(true); 
 let navigation=useNavigate()
   useEffect(() => {
     const data = localStorage.getItem("carts");
@@ -19,6 +21,7 @@ let navigation=useNavigate()
       total: (item.price ?? item.Price) * 1,
     }));
     setUniqueItems(itemsWithCount);
+    setLoading(false);
   }, []);
 
   useEffect(() => {
@@ -103,7 +106,8 @@ let navigation=useNavigate()
   return (
     <>
       <Layout1>
-        <section className="h-screen bg-[#E1D9D1] dark:bg-[#36454F] dark:text-white">
+       {
+        loading ? <Loading/> :( <section className="h-screen bg-[#E1D9D1] dark:bg-[#36454F] dark:text-white">
           <div className="flex justify-center border-2 bg-amber-600">
             <button className="text-[1.5rem]" onClick={handleLogout}>
               Logout
@@ -149,7 +153,8 @@ let navigation=useNavigate()
             <h2>Total Items: {totalItems.toFixed(2)}</h2>
             <h2>Overall Total: {overallTotal.toFixed(2)} Taka</h2>
           </div>
-        </section>
+        </section>)
+       }
       </Layout1>
     </>
   );
