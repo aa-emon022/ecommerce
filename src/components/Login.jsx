@@ -62,6 +62,11 @@ const LoginPage = () => {
           <h1 className="text-center text-[3rem]">Is logged in</h1>
         ) : (
           // If not logged in, display the login form
+          <div>
+          <div>
+            <h1>email: eve.holt@reqres.in</h1>
+            <h1>password: cityslicka</h1>
+          </div>
           <div className="min-h-screen flex items-center justify-center ">
             <div
               className="bg-white p-8 rounded-lg shadow-md w-full max-w-md"
@@ -100,6 +105,8 @@ const LoginPage = () => {
               </form>
             </div>
           </div>
+          </div>
+        
         )}
       </section>
     </Layout1>
