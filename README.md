@@ -1,12 +1,12 @@
 ## Things I used in this project
-### Router Components:
+## Router Components:
 BrowserRouter,Routes,Route ,lazy() ,loader()
 <Link>,<NavLink>, Best to use CreateBrowserRouter
-### Hooks:
+## Hooks:
 useState, useEffect, useContext, useCallback, useMemo, useRef, useParams, useLocaction,
 custom-hook
-###javascript Component:
-Basic components are used in JavaScript.Also used.
+## javascript Component:
+* * Basic components are used in JavaScript.Also used.
 Arrow Function, IIFE, Callback function, Async, closures(When I add to card a product
 but later when increasing or decreasing or deleting again), event ,localstorage, slice() ,
 concat(), Include(), filter(), Slice() , reduce() , window.scrollTo(), js Dom(While doing dark
